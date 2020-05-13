@@ -232,7 +232,17 @@ class Ui_MainWindow(QtWidgets.QWidget):
         
         thread = Thread(target=self.play,args=[(idx)])
         thread.start()
-            
+
+    
+    def deleteItemsOfLayout(self,layout):
+        if layout is not None:
+            while layout.count():
+                item = layout.takeAt(0)
+                widget = item.widget()
+                if widget is not None:
+                    widget.setParent(None)
+                else:
+                    self.deleteItemsOfLayout(item.layout())
 
     def play_btn(self):
         global clicked
@@ -240,6 +250,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         if self.key == True:
             for label in self.labels:
                 label.clear()
+            self.deleteItemsOfLayout(self.gridLayout)
             self.labels = []
             clicked = not clicked
             artist = self.comboBox.currentText()
