@@ -1,0 +1,5 @@
+mutagen
+pygame
+requests
+Pillow==2.2.1
+pyqt5
