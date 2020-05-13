@@ -32,7 +32,7 @@ or\
 `pip install pygame`\
 `pip install mutagen`\
 `pip install Pillow==2.2.1`\
-`sudo pip3 install requests`
+`pip install requests`
 ### Screenshot:
 ![](https://github.com/MoIzadloo/radiojavan/blob/master/Screenshot%20(1).png)
 ### Download & Config & Usage:
