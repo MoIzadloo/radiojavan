@@ -40,7 +40,7 @@ or\
 >Download the tool from github\
 `git clone https://github.com/MoIzadloo/radiojavan.git`\
 >Set script execution permission\
-`cd gramophone`\
+`cd radiojavan`\
  `chmod +x main.py`\
  >Run and enjoy:\
  `python3 main.py`
