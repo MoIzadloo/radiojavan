@@ -34,8 +34,7 @@ or\
 `pip install Pillow==2.2.1`\
 `sudo pip3 install requests`
 ### Screenshot:
-![](https://github.com/MoIzadloo/gramophone/blob/master/Screenshot%20(1).png)\
-![](https://github.com/MoIzadloo/gramophone/blob/master/Screenshot%20(2).png)
+![](https://github.com/MoIzadloo/radiojavan/blob/master/Screenshot%20(1).png)\
 ### Download & Config & Usage:
 ### Linux
 >Download the tool from github\
