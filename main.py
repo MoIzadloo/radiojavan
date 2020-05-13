@@ -67,6 +67,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.key = False
         self.height = height
         self.width = width
+        pygame.mixer.init()
 
 
 
@@ -229,7 +230,8 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.btn_play.update()
         idx = self.buttons.index(btn)
         
-        self.play(idx)
+        thread = Thread(target=self.play,args=[(idx)])
+        thread.start()
             
 
     def play_btn(self):
@@ -279,7 +281,8 @@ class Ui_MainWindow(QtWidgets.QWidget):
             if previous_song < 0:
                 previous_song = len(self.songs_name) - 1
             
-            self.play(previous_song)
+            thread = Thread(target=self.play,args=[(previous_song)])
+            thread.start()
         except:
             pass
 
@@ -291,7 +294,6 @@ class Ui_MainWindow(QtWidgets.QWidget):
             image.save(os.path.join(self.src,"album.png"))
             self.img_album.setPixmap(QtGui.QPixmap(os.path.join(self.src,"album.png")))
             self.update_background(idx)
-            pygame.mixer.init()
             pygame.mixer.music.load(os.path.join(self.musics_path,self.songs_name[idx] + '.mp3'))
             pygame.mixer.music.play(-1)
             self.music = idx
@@ -306,7 +308,8 @@ class Ui_MainWindow(QtWidgets.QWidget):
             if next_song >= len(self.songs_name):
                 next_song = 0
 
-            self.play(next_song)
+            thread = Thread(target=self.play,args=[(next_song)])
+            thread.start()
             
         except :
             pass
