@@ -330,7 +330,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
 
     def retranslateUi(self, main_window):
         _translate = QtCore.QCoreApplication.translate
-        self.main_window.setWindowTitle(_translate("main_window", "main_window"))
+        self.main_window.setWindowTitle(_translate("main_window", "radiojavan"))
 
 
 if __name__ == "__main__":
