@@ -216,7 +216,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
     def update_background(self,idx):
         for label in self.labels:
             if self.labels.index(label) == idx:
-                label.setStyleSheet("background-color: white")
+                label.setStyleSheet("background-color: #7f7f7f")
                 label.update()
             else:
                 label.setStyleSheet("")
